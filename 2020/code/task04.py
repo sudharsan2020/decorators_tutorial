@@ -9,7 +9,4 @@ def fibonacci(number):
 
       fib_n = fib_n-1 + fib_n-2
     """
-    if number < 2:
-        return 1
-
-    return fibonacci(number - 1) + fibonacci(number - 2)
+    return 1 if number < 2 else fibonacci(number - 1) + fibonacci(number - 2)

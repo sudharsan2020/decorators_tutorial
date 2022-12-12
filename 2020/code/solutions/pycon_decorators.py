@@ -102,7 +102,4 @@ def supertrace(func=None, *, logger=print):
 
         return _supertrace
 
-    if func is None:
-        return _supertrace_decorator
-    else:
-        return _supertrace_decorator(func)
+    return _supertrace_decorator if func is None else _supertrace_decorator(func)
